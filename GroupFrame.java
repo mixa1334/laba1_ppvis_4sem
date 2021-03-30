@@ -21,9 +21,9 @@ public class GroupFrame extends JFrame {
     GroupFrame(MyPanel panel) {
         int x = 50;
         if (!allFrames.isEmpty()) {
-            x = allFrames.get(allFrames.size() - 1).getX() + 250;
+            x = allFrames.get(allFrames.size() - 1).getX() + 450;
         }
-        setBounds(x, 50, 200, 200);
+        setBounds(x, 50, 400, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         add(panel);
         allFrames.add(this);

@@ -19,7 +19,8 @@ public class MyFrame extends JFrame {
         rootPane.getActionMap().put("ctrl+R_Action", new CtrlRAction());
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new GridLayout(3, 2));
+        //setLayout(new GridLayout(3, 2));
+        setLayout(new EllipseLayout());
         setVisible(true);
         setBounds(Toolkit.getDefaultToolkit().getScreenSize().width / 2 - 300,
                 Toolkit.getDefaultToolkit().getScreenSize().height / 2 - 450,

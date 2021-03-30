@@ -1,7 +1,6 @@
 package laba1;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -21,12 +20,14 @@ public class MyPanel extends JPanel implements ActionListener {
         jTextField = new JTextField();
         jTextField.setText(nameOfCheckBox1);
 
-        setLayout(new GridLayout(5, 1));
+        //setLayout(new GridLayout(5, 1));
+        setLayout(new EllipseLayout());
         add(jCheckBox1);
         add(jCheckBox2);
         add(jCheckBox3);
         add(jTextField);
         add(jButton);
+        setSize(200,300);
     }
 
     @Override
