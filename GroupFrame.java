@@ -11,19 +11,18 @@ public class GroupFrame extends JFrame {
         for (GroupFrame temp : allFrames) {
             temp.setVisible(false);
         }
-        if (current == allFrames.size()) {
-            current = 0;
-        }
-        allFrames.get(current++).setVisible(true);
+        allFrames.get(current == allFrames.size() ? current = 0 : current).setVisible(true);
+        ++current;
     });
 
 
     GroupFrame(MyPanel panel) {
         int x = 50;
+        int size = 200;
         if (!allFrames.isEmpty()) {
-            x = allFrames.get(allFrames.size() - 1).getX() + 450;
+            x = allFrames.get(allFrames.size() - 1).getX() + x + size;
         }
-        setBounds(x, 50, 400, 200);
+        setBounds(x, 50, size, size);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         add(panel);
         allFrames.add(this);
